@@ -18,16 +18,13 @@ func (sv Semmanticverion) String() string {
 	return fmt.Sprintf("%d.%d.%d", sv.major, sv.minor, sv.patch)
 }
 
-func (sv Semmanticverion) IncrementMajor() Semmanticverion {
+func (sv *Semmanticverion) IncrementMajor()  {
 	sv.major += 1
-	return sv
 }
 
-func (sv Semmanticverion) IncrementMinor() Semmanticverion {
+func (sv *Semmanticverion) IncrementMinor()  {
 	sv.minor += 1
-	return sv
 }
-func (sv Semmanticverion) IncrementPatch() Semmanticverion {
+func (sv *Semmanticverion) IncrementPatch()  {
 	sv.patch += 1
-	return sv
 }

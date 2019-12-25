@@ -9,13 +9,14 @@ import (
 func main() {
 	sv := simplemath.NewVersion(1, 2, 3)
 	println(sv.String())
-	sv = sv.IncrementMajor()
+	
+	sv.IncrementMajor()
 	println(sv.String())
 
-	sv = sv.IncrementMinor()
+	sv.IncrementMinor()
 	println(sv.String())
 
-	sv = sv.IncrementPatch()
+	sv.IncrementPatch()
 	println(sv.String())
 
 	fmt.Printf("%f\n", simplemath.Add(1, 2))
