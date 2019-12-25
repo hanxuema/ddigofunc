@@ -9,7 +9,15 @@ import (
 func main() {
 	sv := simplemath.NewVersion(1, 2, 3)
 	println(sv.String())
-	
+	sv = sv.IncrementMajor()
+	println(sv.String())
+
+	sv = sv.IncrementMinor()
+	println(sv.String())
+
+	sv = sv.IncrementPatch()
+	println(sv.String())
+
 	fmt.Printf("%f\n", simplemath.Add(1, 2))
 
 	answer, err := simplemath.Divide(1, 0)
