@@ -7,9 +7,22 @@ import (
 )
 
 func main() {
+
+	a := func() {
+		println("anonymous function")
+	}
+	a()
+
+	b := func(name string) string {
+		println("anonymous function", name)
+		return name
+	}
+	c := b("second")
+	println("c ", c)
+
 	sv := simplemath.NewVersion(1, 2, 3)
 	println(sv.String())
-	
+
 	sv.IncrementMajor()
 	println(sv.String())
 
